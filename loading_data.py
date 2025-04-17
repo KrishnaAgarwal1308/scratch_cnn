@@ -3,7 +3,7 @@ import torchvision
 from torchvision import transforms
 
 transform = transforms.Compose(
-    [transforms.Resize(224),
+    [transforms.Resize(224),#comment this if running the cnnnetwork since it takes 32x32 images
      transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 

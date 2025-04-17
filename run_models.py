@@ -5,11 +5,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 import torchvision
+from cnn_using_modules import CNNNetwrok
 
 
 network_to_use = 'AlexNet'
 network_mapping = {
-    'AlexNet': AlexNet,}
+    'AlexNet': AlexNet,
+    'CNNNetwrok': CNNNetwrok}
 
 # defining hyper parameters
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
