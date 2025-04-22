@@ -2,12 +2,13 @@ import torch
 import torchvision
 from torchvision import transforms
 
+image_size = 224
 transform = transforms.Compose(
-    [transforms.Resize(224),#comment this if running the cnnnetwork since it takes 32x32 images
+    [transforms.Resize(image_size),#comment this if running the cnnnetwork since it takes 32x32 images
      transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-batch_size = 4
+batch_size = 32
 
 trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
                                         download=False, transform=transform)

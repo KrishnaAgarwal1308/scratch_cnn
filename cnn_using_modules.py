@@ -76,8 +76,8 @@ if __name__ == '__main__':
                 print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.3f}')
                 running_loss = 0.0
     print('Finished Training')
-PATH = './cifar_net.pth'
-torch.save(net.state_dict(), PATH)
+    PATH = './cifar_net.pth'
+    torch.save(net.state_dict(), PATH)
 dataiter = iter(testloader)
 images, labels = next(dataiter)
 
