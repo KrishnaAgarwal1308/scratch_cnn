@@ -1,0 +1,1 @@
+I know that it is not a cnn network but it is current SOTA architecture thus was worth looking at.
